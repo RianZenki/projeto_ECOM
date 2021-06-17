@@ -1,0 +1,115 @@
+
+
+main {
+    margin: 30px 0;
+    height: 100%;
+}
+
+section.listProduto {
+    width: 90%;
+    max-width: 1220px;
+    margin: 0 auto;
+
+}
+
+h2 {
+    color: var(--dark-gray);
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+section.listProduto .produtosContainer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(210px, 1fr));
+    grid-gap: 20px;
+
+    padding: 20px;
+} 
+
+section.listProduto .produtosContainer > p {
+    font-size: 1.8rem;
+} 
+
+section.listProduto .produtosContainer .produto {
+    border: solid 1px #f1ebeb;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #ececec;  
+    background-color: var(--white);  
+    transition: all 300ms;
+}
+
+
+section.listProduto .produtosContainer .produto a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px; 
+    height: 360px;
+
+}
+
+section.listProduto .produtosContainer .produto:hover {
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 5px;
+}   
+
+section.listProduto .produtosContainer .produto a .infoProduto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+    color: var(--black) ;
+}
+
+.produtosContainer .produto a .infoProduto p {
+    color: var(--light-gray);
+    font-size: 1.8rem;
+    margin-bottom: 10px; 
+
+}
+
+.produtosContainer .produto a .infoProduto strong {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    max-width: 200px;
+    object-fit: cover;
+}
+
+section.listProduto .produtosContainer .produto a img{
+    width: 100%;
+    max-height: 190px;
+    padding: 10px;
+
+    max-width: 200px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 980px) {
+    section.listProduto .produtosContainer {
+        grid-template-columns: repeat(3, minmax(210px, 1fr));
+    } 
+}
+
+@media screen and (max-width: 750px) {
+    section.listProduto .produtosContainer {
+        grid-template-columns: repeat(2, minmax(210px, 1fr));
+    } 
+}
+
+@media screen and (max-width: 520px) {
+    section.listProduto .produtosContainer {
+        grid-template-columns: repeat(1, minmax(210px, 380px));
+    }
+    
+    main {
+        height: auto;
+    }
+
+}
